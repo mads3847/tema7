@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        let timer = 4;
+        let co2 = 109;
+        let udledning = timer * co2;
+        let resultat;
+
+
+
+        function button_clicked() {
+        let længde = document.querySelector("#længde").value;
+        let bredde = document.querySelector("#bredde").value;
+        let areal = længde * bredde;
+
+            let resultat = `Arealet er ${areal} kvadratmeter`;
+
+
+
+
+
+
+        if (udledning < 110) {
+            resultat = "Klimahelt.";
+        }
+        if (udledning >= 110 && udledning < 220) {
+            resultat = "Du er veganer men vejer 100 kg.";
+        }
+
+        if (udledning >= 220 && udledning < 328) {
+            resultat = "Du kan godt stoppe med at spise fisk.";
+        }
+
+        if (udledning > 328) {
+            resultat = "Du vasker ansiget hver aften i palmeolie.";
+        }
+
+
+
+        console.log(resultat);
+
+    </script>
+</body>
+
+</html>

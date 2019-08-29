@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+<p>Hvor mange timer? </p>
+    <input typen="text" id="timer">
+    <button>Udregn antal kg. pr. timer</button>
+
+
+
+
+    <script>
+        document.querySelector("button").addEventListener("click", button_clicked);
+
+
+
+
+
+
+
+
+              function button_clicked() {
+        let timer = document.querySelector("#timer").value;
+        let co2 = 109;
+        let udledning = timer * co2;
+
+            let resultat = `Udledningen er ${udledning} kg. CO2`;
+
+
+
+
+
+        if (udledning < 110) {
+            resultat = "Klimahelt.";
+        }
+        if (udledning >= 110 && udledning < 220) {
+            resultat = "Du er veganer men vejer 100 kg.";
+        }
+
+        if (udledning >= 220 && udledning < 328) {
+            resultat = "Du kan godt stoppe med at spise fisk.";
+        }
+
+        if (udledning > 328) {
+            resultat = "Du vasker ansiget hver aften i palmeolie.";
+        }
+
+
+
+        console.log(resultat);
+
+    </script>
+</body>
+
+</html>
